@@ -40,14 +40,10 @@ public class DaoFactory {
 
 	public static void registerUser(Login userdata) {
 		Session session=factory.openSession();
-		Flights flights=new Flights();
-		flights.setId(4);
-		flights.setSource("Bangalore");
-		flights.setDestination("Hubli");
-		flights.setFlightname("Emirates");
+		
 		session.beginTransaction();
 		session.save(userdata);
-		session.save(flights);
+	
 		session.getTransaction().commit();
 		session.close();
 		
@@ -59,7 +55,7 @@ public static List<String> getFlights(String source, String destination){
 
 	session.beginTransaction();
 	//Create Native Query implies that we are using NATIVE SQL Statement for our query. Note that: We are not using HQL
-	Query query=session.createNativeQuery("select flightname from flights where source=:source && destination=:destination");
+	Query query=session.createQuery("select flightname from Flights where source=:source and destination=:destination");
 	query.setParameter("source", source);	
 	query.setParameter("destination", destination);
 	List<String> flights=query.list();
