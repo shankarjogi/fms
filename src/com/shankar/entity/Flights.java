@@ -1,5 +1,7 @@
 package com.shankar.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -7,33 +9,59 @@ import javax.persistence.Id;
 public class Flights {
 
 	@Id
-	private int id;
 	private String source;
 	private String destination;
 	private String flightname;
-	public int getId() {
-		return id;
+	private String date;
+	private String travel_fare;
+
+	public String getTravel_fare() {
+		return travel_fare;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	public void setTravel_fare(String travel_fare) {
+		this.travel_fare = travel_fare;
 	}
+
+	
+
 	public String getSource() {
 		return source;
 	}
+
 	public void setSource(String source) {
 		this.source = source;
 	}
+
 	public String getDestination() {
 		return destination;
 	}
+
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	public String getFlightname() {
+
+	public String getflightname() {
 		return flightname;
 	}
-	public void setFlightname(String flightname) {
+
+	public void setflightname(String flightname) {
 		this.flightname = flightname;
 	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	@Override
+	public String toString() {
+		return "Flights [source=" + source + ", destination=" + destination + ", flightname=" + flightname + ", date="
+				+ date + ", travel_fare=" + travel_fare + "]";
+	}
 	
+
 }

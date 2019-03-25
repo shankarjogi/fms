@@ -14,6 +14,7 @@
 <property name="hbm2ddl.auto">update</property>
 <mapping class="com.shankar.entity.Login"/>
 <mapping class="com.shankar.entity.Flights"/>
+<mapping class="com.shankar.entity.Flight0"/>
 
 </session-factory>
 </hibernate-configuration>
