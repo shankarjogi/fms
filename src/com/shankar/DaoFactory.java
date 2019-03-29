@@ -2,23 +2,14 @@ package com.shankar;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import javax.persistence.NamedNativeQuery;
 
-import org.h2.engine.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
-import org.hibernate.service.Service;
-import org.hibernate.service.ServiceRegistry;
 
 import com.shankar.entity.Flight0;
 import com.shankar.entity.Flights;
@@ -106,10 +97,11 @@ public class DaoFactory {
 
 	}
 
-	public static void getbookings(String first_name, String last_name, String d_o_b, String nationality,
-			String gender, String flightname) {
+	public static int getbookings(String first_name, String last_name, String d_o_b, String nationality,
+			String gender, String flightname ) {
 		Session session = factory.openSession();
 		session.beginTransaction();
+		
 		Flight0 a= new Flight0();
 		a.setFirst_name(first_name);
 		a.setLast_name(last_name);
@@ -117,11 +109,13 @@ public class DaoFactory {
 		a.setNationality(nationality);
 		a.setGender(gender);
 		a.setFlightName(flightname);
+	
 		session.save(a);
+		
 		session.getTransaction().commit();
 		session.close();
 		
-	
+	return a.getTicket_no();
 	
 	}
 }
