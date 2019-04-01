@@ -41,7 +41,7 @@ body {
 					</div>
 				</div>
 				<div class="card-body">
-					<form action="Book" method="POST">
+	<form action="Book" method="POST"> 
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -71,13 +71,7 @@ body {
 							<input type="text" class="form-control" placeholder="Nationality"
 								name="nationality">
 						</div>
-							<!-- <div class="input-group form-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" class="form-control" placeholder="Adhar Number"
-								name="Adhar_no">
-						</div>  -->
+							
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -87,7 +81,12 @@ body {
 						</div>
 
 						<div class="form-group">
-							<input type="submit" value="Book" class="btn btn-success">
+							 <!-- <input type="submit" value="Payment" class="btn btn-success"> <a href="Payment.jsp">Payment</a>
+							<button type="submit" value="Payment" class="btn btn-success">
+ -->
+ 
+ <input type="submit" value="Payment" class="btn btn-success"></input>
+ 
 						</div>
 					</form>
 				</div>

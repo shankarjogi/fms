@@ -8,12 +8,13 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
+<script src="resources/css/jquery.js" type="text/javascript"></script>
 <style>
 body {
-	background:
-		url(https://images.unsplash.com/photo-1532973497172-04b34d604825?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+	background:url(https://images.unsplash.com/photo-1532973497172-04b34d604825?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -48,23 +49,28 @@ body {
 
 
 
-			<form action="bookflight">
+			 <form action="bookflight" method="POST">
 				<tr>
 
-					<td><c:out value="${f.flightname }"></c:out></td>
-					<td><c:out value="${f.travel_fare }"></c:out></td>
-					<td><c:out value="${f.source }"></c:out></td>
+					<td><c:out value="${f.flightname }" ></c:out></td>
+					<td><c:out value="${f.travel_fare }" ></c:out></td>
+					<td><c:out value="${f.source }" ></c:out></td>
 					<td><c:out value="${f.destination }"></c:out></td>
 
 
 
-					<td><input type="hidden" value="${f.flightname}" name="flightname">
+					<td><input type="hidden" value="${f.flightname}${f.travel_fare}" name="flightname">
 						<input type="submit" value="Book!"></td>
 				</tr>
-			</form>
+			</form> 
+			
+			
+			
+			
 
 		</c:forEach>
 	</table>
+
 </body>
 </html>
 

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +39,7 @@
 							<div class="col-md-3">
 								<div class="form-group">
 									<span class="form-label">Ticket No</span> <input
-										class="form-control" type="text" value="${ticket_no}" >
+										class="form-control" type="text" value="${ticket_no}">
 								</div>
 							</div>
 
@@ -53,13 +47,13 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Flight Name</span> <input
-											class="form-control" type="text" value="${flightname}" disabled>
+											class="form-control" type="text" value="${flightname}">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Name</span> <input
-											class="form-control" type="text" value="${name }" disabled>
+											class="form-control" type="text" value="${name }">
 									</div>
 								</div>
 							</div>
@@ -68,13 +62,13 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Flying from</span> <input
-											class="form-control" type="text" value="${source}" disabled>
+											class="form-control" type="text" value="${source}">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Flyning to</span> <input
-											class="form-control" type="text" value="${destination }" disabled>
+											class="form-control" type="text" value="${destination }">
 									</div>
 								</div>
 							</div>
@@ -82,26 +76,26 @@
 								<div class="col-md-3">
 									<div class="form-group">
 										<span class="form-label">Date of Birth</span> <input
-											class="form-control" type="text" value="${dob }" disabled>
+											class="form-control" type="text" value="${dob }">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-3">
 										<div class="form-group">
 											<span class="form-label">Nationality</span> <input
-												class="form-control" type="text" value="${nationality }" disabled>
+												class="form-control" type="text" value="${nationality }">
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="form-group">
 											<span class="form-label">Gender</span> <input
-												class="form-control" type="text" value="${gender}" disabled>
+												class="form-control" type="text" value="${gender}">
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="form-group">
 											<span class="form-label">Travel Date</span> <input
-												class="form-control" type="text" value="${date}" disabled>
+												class="form-control" type="text" value="${date}">
 										</div>
 									</div>
 									<!-- 			<div class="col-md-2">

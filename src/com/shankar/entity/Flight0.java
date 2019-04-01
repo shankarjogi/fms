@@ -21,6 +21,9 @@ public class Flight0 {
 	private String gender;
 	private String flightname;
 
+
+
+
 	public String getFlightName() {
 		return flightname;
 	}

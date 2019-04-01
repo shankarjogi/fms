@@ -15,6 +15,17 @@ public class Flights {
 	private String date;
 	private String travel_fare;
 
+
+	
+
+	public String getFlightname() {
+		return flightname;
+	}
+
+	public void setFlightname(String flightname) {
+		this.flightname = flightname;
+	}
+
 	public String getTravel_fare() {
 		return travel_fare;
 	}
@@ -22,8 +33,6 @@ public class Flights {
 	public void setTravel_fare(String travel_fare) {
 		this.travel_fare = travel_fare;
 	}
-
-	
 
 	public String getSource() {
 		return source;

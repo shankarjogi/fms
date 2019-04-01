@@ -132,26 +132,22 @@ public class Mycontroller {
 		String d_0_b = request.getParameter("d_0_b");
 		String nationality = request.getParameter("nationality");
 		String gender = request.getParameter("gender");
-//		Long Adhar_no=	Long.parseLong(request.getParameter("Adhar_no"));
 		
 		HttpSession session=request.getSession();
 	    String flightname=(String) session.getAttribute("flightname");
 		int ticket_no=DaoFactory.getbookings(first_name, last_name, d_0_b, nationality, gender, flightname);
 		BigInteger Users = DaoFactory.getSeats(first_name);
 		ModelAndView mv = new ModelAndView();
-//		mv.addObject("users", Users);
-//		mv.setViewName("flight0.jsp");
-	
+
 		
-		mv.addObject("users", Users);
-		mv.addObject("name", first_name + " " +last_name);
-		mv.addObject("dob", d_0_b);
-	
-		mv.addObject("nationality", nationality);
-		mv.addObject("gender", gender);
-		mv.addObject("flightname", flightname);
-		mv.addObject("ticket_no",ticket_no);
-		mv.setViewName("flight0_booking.jsp");
+		session.setAttribute("name", first_name + " " +last_name);
+		session.setAttribute("dob", d_0_b);
+		session.setAttribute("nationality", nationality);
+	    session.setAttribute("gender", gender);
+	    session.setAttribute("flightname", flightname);
+		
+	    session.setAttribute("ticket_no", ticket_no);
+		mv.setViewName("Payment.jsp");
 	
 		return mv;
 	}
@@ -163,14 +159,9 @@ public class Mycontroller {
 		String flightname = request.getParameter("flightname");
 		System.out.println(flightname);
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("flightname", flightname);
-		
 		HttpSession session = request.getSession();
-	
 		session.setAttribute("flightname", flightname);
 		mv.setViewName("flight0.jsp");
-/*        mv.addObject("flightname", flightname);
-		mv.setViewName("flight0_booking.jsp");*/
 		return mv;
 
 	}
