@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<i style="animation-direction:alternate-reverse;">
+<font size="8" color="White"><i>Welcome To Flight Reservation System</i></i></font>
 <title>Login Page</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,8 +43,7 @@ body {
 							class="fab fa-twitter-square"></i></span>
 					</div>
 				</div>
-				<div class="card-body" style="color:red">${errorMsg}</div>
-				
+				<div class="card-body" style="color:red">${errorMsg}</div>				
 				
 				<div>
 					

@@ -59,7 +59,7 @@ body {
 
 
 
-					<td><input type="hidden" value="${f.flightname}${f.travel_fare}" name="flightname">
+					<td><input type="hidden" value="${f.flightname},${f.travel_fare}" name="flightname">
 						<input type="submit" value="Book!"></td>
 				</tr>
 			</form> 

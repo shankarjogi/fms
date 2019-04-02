@@ -92,6 +92,7 @@ public class Mycontroller {
 		session.setAttribute("date", date);
 		session.setAttribute("travel", travel_fare);
 		System.out.println(source + " " + destination + " " + date+" "+flightname);
+	System.out.println("tr"+ travel_fare);
 		List<Flights> flights = DaoFactory.getFlights(source, destination, date);
 		ModelAndView mv = new ModelAndView();
 		/*mv.addObject("travel", flights);*/
@@ -103,7 +104,7 @@ public class Mycontroller {
 		mv.addObject("source", source);
 		mv.setViewName("SearchFlights.jsp");
 		mv.addObject("destination", destination);
-		mv.setViewName("SearchFlights.jsp");
+		mv.setViewName("SearchFlights.jsp");                         
 
 		mv.addObject("flight", flights);
 		mv.setViewName("SearchFlights.jsp");
@@ -157,10 +158,13 @@ public class Mycontroller {
 
 		
 		String flightname = request.getParameter("flightname");
+	
 		System.out.println(flightname);
+		String[] flight=flightname.split(",");
 		ModelAndView mv = new ModelAndView();
 		HttpSession session = request.getSession();
-		session.setAttribute("flightname", flightname);
+		session.setAttribute("flightname", flight[0]);
+		session.setAttribute("travel_fare", flight[1]);
 		mv.setViewName("flight0.jsp");
 		return mv;
 
